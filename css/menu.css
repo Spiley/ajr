@@ -1,0 +1,85 @@
+.nav__cont {
+  position: fixed;
+  width: 60px;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: #808080;
+  overflow: hidden;
+  transition: width .3s ease;
+  cursor: pointer;
+  box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4);
+} /* zorgt voor een begin bij de navbar */
+
+.nav__cont:hover {
+  width: 200px;
+} /* de website weet hier wanneer je muis over de nav bar gaat */
+
+  .nav__cont {
+    width: 80px;
+  } /* zorgt voor de breedte van de bar */
+
+
+.nav {
+  list-style-type: none;
+  color: white;
+} /* haalt de punten weg bij list */ 
+
+.nav:first-child {
+  padding-top: 1.5rem;
+} /* zorgt voor een witregel vanaf de statusbar*/
+
+.nav__items {
+  padding-bottom: 4rem;
+  font-family: 'roboto';  
+} /* zorgt voor een afstand tussen de icons */
+
+
+.nav__items a {
+  position: relative;
+  display: block;
+  top: -35px;
+  padding-left: 25px;
+  padding-right: 15px;
+  transition: all .3s ease;
+  margin-left: 25px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: 'roboto';
+  font-weight: 100;
+  font-size: 1.35em;
+} /* zorgt voor de blauwe kleur als je met je muis over de tekst gaat */
+
+
+.nav__items a:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
+  opacity: 0;
+  transition: all .5s ease;
+  z-index: -10;
+} /* zorgt voor de blauwe gloed */
+
+
+.nav__items:hover a:after {
+  opacity: 1;
+} /* zorgt ervoor dat de blauwe gloed ook echt ontstaat*/
+
+
+@media screen and (min-width: 600px) {
+  .nav__items svg {
+    width: 32px;
+    height: 32px;
+    left: -15px;
+  }
+  /* zorgt ervoor dat de achtergrond werkt*/
+}
+
+
+
